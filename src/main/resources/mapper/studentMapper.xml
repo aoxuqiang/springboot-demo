@@ -8,4 +8,7 @@
     <select id="getStudentById" parameterType="int" resultMap="studentMap">
         SELECT * from student where s_id=#{id}
     </select>
+    <select id="insertStudent" parameterType="com.miqi.springbootdemo.domain.Student">
+        INSERT student values(#{id},#{name})
+    </select>
 </mapper>
