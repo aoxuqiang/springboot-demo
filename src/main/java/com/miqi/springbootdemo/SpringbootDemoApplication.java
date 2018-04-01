@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -23,9 +24,9 @@ public class SpringbootDemoApplication {
 
 	@RequestMapping("/hello")
 	public String sayHello(){
-		return "hello,world,ao xuqiang ni hao de";
+		return "hello,world,ao xuqiang ni shi shui wo de shu";
 	}
-	@RequestMapping("/student/{id}")
+	@RequestMapping(value = "/student/{id}",method = RequestMethod.POST)
 	public Student getStudentById(@PathVariable int id){
 		return studentMapper.getStudentById(id);
 	}

@@ -2,7 +2,6 @@ package com.miqi.springbootdemo.domain;
 
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 /**
