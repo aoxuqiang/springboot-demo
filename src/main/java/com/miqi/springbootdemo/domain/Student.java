@@ -2,6 +2,8 @@ package com.miqi.springbootdemo.domain;
 
 import org.springframework.stereotype.Repository;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 /**
@@ -10,7 +12,7 @@ import java.io.Serializable;
 public class Student implements Serializable{
 
     private static final long serialVersionUID = -3407538386422822084L;
-
+    @Max(value=20,message="id不能超过20")
     private int id;
     private String name;
 
